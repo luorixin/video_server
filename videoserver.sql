@@ -11,7 +11,7 @@
  Target Server Version : 50624
  File Encoding         : utf-8
 
- Date: 03/22/2020 15:53:40 PM
+ Date: 03/23/2020 16:44:28 PM
 */
 
 SET NAMES utf8;
@@ -51,6 +51,15 @@ CREATE TABLE `users` (
   `pwd` text,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`login_name`) USING HASH
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+--  Table structure for `video_del_rec`
+-- ----------------------------
+DROP TABLE IF EXISTS `video_del_rec`;
+CREATE TABLE `video_del_rec` (
+  `video_id` varchar(64) NOT NULL,
+  PRIMARY KEY (`video_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
